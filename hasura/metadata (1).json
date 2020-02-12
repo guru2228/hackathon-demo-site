@@ -1,0 +1,312 @@
+{
+  "functions": [],
+  "remote_schemas": [],
+  "query_collections": [],
+  "allowlist": [],
+  "version": 2,
+  "tables": [
+    {
+      "table": "food_preferences",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [
+        {
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "food_pref_id",
+              "table": "users"
+            }
+          },
+          "name": "users",
+          "comment": null
+        }
+      ],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "ideas",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [
+        {
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "idea_id",
+              "table": "users"
+            }
+          },
+          "name": "users",
+          "comment": null
+        }
+      ],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "locations",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [
+        {
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "location_id",
+              "table": "users"
+            }
+          },
+          "name": "users",
+          "comment": null
+        }
+      ],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "t_shirt_sizes",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [
+        {
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "t_shirt_size_id",
+              "table": "users"
+            }
+          },
+          "name": "users",
+          "comment": null
+        }
+      ],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "user_counts_by_types",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "users",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [
+        {
+          "using": {
+            "foreign_key_constraint_on": "food_pref_id"
+          },
+          "name": "food_preference",
+          "comment": null
+        },
+        {
+          "using": {
+            "foreign_key_constraint_on": "idea_id"
+          },
+          "name": "idea",
+          "comment": null
+        },
+        {
+          "using": {
+            "foreign_key_constraint_on": "location_id"
+          },
+          "name": "location",
+          "comment": null
+        },
+        {
+          "using": {
+            "foreign_key_constraint_on": "t_shirt_size_id"
+          },
+          "name": "t_shirt_size",
+          "comment": null
+        }
+      ],
+      "array_relationships": [],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "users_by_food_preferences",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "users_by_ideas",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "users_by_location",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    },
+    {
+      "table": "users_by_tshirt_sizes",
+      "is_enum": false,
+      "configuration": {
+        "custom_root_fields": {
+          "select": null,
+          "select_by_pk": null,
+          "select_aggregate": null,
+          "insert": null,
+          "update": null,
+          "delete": null
+        },
+        "custom_column_names": {}
+      },
+      "object_relationships": [],
+      "array_relationships": [],
+      "insert_permissions": [],
+      "select_permissions": [],
+      "update_permissions": [],
+      "delete_permissions": [],
+      "event_triggers": [],
+      "computed_fields": []
+    }
+  ]
+}
